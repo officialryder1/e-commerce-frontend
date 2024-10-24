@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import { isTokenExpired } from '$lib/utils/tokenUtil'
 import { sequence } from '@sveltejs/kit/hooks'
 import {SECRET, API} from '$env/static/private'
-import { redirect } from '@sveltejs/kit'
+// import { redirect } from '@sveltejs/kit'
 
 
 const firstHandle = async({event, resolve}) => {
@@ -12,7 +12,7 @@ const firstHandle = async({event, resolve}) => {
    
     if (accessToken){
         if(isTokenExpired(accessToken)){
-            throw redirect(302, '/auth/logout')
+            event.cookies.delete('access_token', {path: '/'})
         }
         try{
              // decode user from access token

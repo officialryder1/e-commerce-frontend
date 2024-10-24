@@ -5,10 +5,12 @@
     export let original_price = "0.99"
     export let id
 
+
     const ImageUrl = (image) => {
         let url = `http://localhost:8000/static/image/${image}`
         return url
     }
+    export let showOrder = true
 
 </script>
 
@@ -20,8 +22,11 @@
         <h2 class="card-title">{name}</h2>
         <p>{original_price}</p>
         <small>{category}</small>
+        {#if showOrder}
         <div class="card-actions justify-end">
-                <a href="/product/{id}" class="btn btn-primary">Order</a>
+            <a href="/product/{id}" class="btn btn-primary">Order</a>
         </div>
+        {/if}
+        <slot></slot>
     </div>
 </div>

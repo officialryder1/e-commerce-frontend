@@ -2,6 +2,7 @@
     import Alert from "$lib/others/alert.svelte";
     import Card from "$lib/cards/card.svelte";
     import Search from "$lib/search/search.svelte";
+    import Cart from "$lib/Cart/Cart.svelte";
   
     export let data
 
@@ -22,7 +23,9 @@
     {/if}
 {/if}
 <br>
-<Search/>
+<Cart/>
+<Search {cards}/>
+
 <h1 class="p-10 font-bold tracking-tight text-green-400">Start shopping through our products</h1>
 <div class="flex justify-center items-center mb-10">
     
