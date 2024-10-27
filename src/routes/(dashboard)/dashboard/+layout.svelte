@@ -3,7 +3,7 @@
     import { fade, fly} from "svelte/transition";
     export let data
 
-    const user = data?.user.data
+    const user = data?.user
     
 </script>
 <DashboardNav {user}/>

@@ -5,7 +5,8 @@ export const load = async ({locals, fetch, cookies}) => {
 
     const user = locals.user
     
-    const user_id = user?.data?.user_id
+    const user_id = user?.id
+    console.log(user_id)
 
     const user_token = cookies.get('access_token')
     
@@ -23,10 +24,12 @@ export const load = async ({locals, fetch, cookies}) => {
         }
     })
 
+
     if(!res.status === 404){
         console.error("Error fetching data")
     }
     const product = await res.json()
+   
 
     return {
         user,

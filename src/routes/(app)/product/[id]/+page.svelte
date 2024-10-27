@@ -5,7 +5,7 @@
     export let data
 
     
-    let cards = data?.product?.data
+    let cards = data?.product
     let showOrder = false
 
     const handleAddToCart = () => {

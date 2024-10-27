@@ -4,7 +4,7 @@
     import "tailwindcss/tailwind.css"
     export let data
 
-    let user = data?.user?.data
+    let user = data?.user
 </script>
 <Navbar {user}/>
 

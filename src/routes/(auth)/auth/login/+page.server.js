@@ -56,6 +56,6 @@ export const actions = {
             return fail(500, { error: "Something went wrong during login. try refreshing the page again..." });
         }
         
-        throw redirect(302, '/')
+        throw redirect(302, '/auth/shipping')
     }
 };

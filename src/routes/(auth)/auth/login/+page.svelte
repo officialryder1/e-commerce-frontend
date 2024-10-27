@@ -1,5 +1,4 @@
 <script>
-    import Footer from '$lib/others/footer.svelte'
     import Alert from '$lib/others/alert.svelte';
     import { fade, slide } from 'svelte/transition';
     
@@ -53,5 +52,5 @@
     </div>
 
 
-    <Footer/>
+
 </div>

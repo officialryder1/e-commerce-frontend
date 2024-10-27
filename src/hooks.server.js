@@ -28,8 +28,17 @@ const firstHandle = async({event, resolve}) => {
                 const userDetail = await res.json()
                 event.locals.user =userDetail
                 
+            
             } else{
                 console.error("Failed to fetch user")
+            }
+
+            const detail = await fetch(`${API}retrieve_user_shipping?user_id=${user_id}`)
+
+            if(detail.ok){
+                const shipping = await detail.json()
+                event.locals.shipping = shipping.data
+                
             }
         }
         catch(err){

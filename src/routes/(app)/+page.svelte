@@ -7,12 +7,12 @@
     export let data
 
     let user = data?.user?.data
-    let user_verify = data?.user?.data.is_verify
-    let user_id = data?.user?.data.user_id
+    let user_verify = data?.user?.is_verify
+    let user_id = data?.user?.user_id
 
  
     export let cards = data?.products?.data
-    
+   
 
     let productImage = cards.map(image => image.product_image)
     
