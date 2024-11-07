@@ -1,4 +1,6 @@
 <script>
+    import DashboardThemeToggle from "../others/DashboardThemeToggle.svelte";
+
     let isOpen = false;
 
     export let user
@@ -9,7 +11,7 @@
       <div class="navbar">
         <!-- Logo -->
         <div class="flex-1">
-          <a class="btn btn-ghost normal-case text-xl" href="/dashboard">Dashboard</a>
+          <a class="btn btn-ghost font-bold normal-case text-xl" href="/dashboard">Dashboard</a>
         </div>
   
         <!-- Desktop Menu -->
@@ -21,7 +23,7 @@
             <li><a href="/contact">Report Feedback</a></li>
           </ul>
         </div>
-  
+        <DashboardThemeToggle/>
         <!-- Mobile Menu Button -->
         <div class="lg:hidden flex-none">
           <button class="btn btn-square btn-ghost" on:click={() => isOpen = !isOpen}>
@@ -31,7 +33,7 @@
           </button>
         </div>
       </div>
-  
+      
       <!-- Mobile Menu -->
       {#if isOpen}
         <ul class="menu menu-compact bg-base-100 p-2 mt-3 shadow-lg rounded-box w-full lg:hidden">

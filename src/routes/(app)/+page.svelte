@@ -2,7 +2,8 @@
     import Alert from "$lib/others/alert.svelte";
     import Card from "$lib/cards/card.svelte";
     import Search from "$lib/search/search.svelte";
-    import Cart from "$lib/Cart/Cart.svelte";
+
+    
   
     export let data
 
@@ -23,10 +24,10 @@
     {/if}
 {/if}
 <br>
-<Cart/>
+
 <Search {cards}/>
 
-<h1 class="p-10 font-bold tracking-tight text-green-400">Start shopping through our products</h1>
+<h1 class="p-10 font-extrabold tracking-wide text-green-400">Start shopping through our products</h1>
 <div class="flex justify-center items-center mb-10">
     
     <div class="carousel carousel-center bg-neutral rounded-box max-w-md space-x-4 p-4">
@@ -39,7 +40,7 @@
         {/each}
     </div>
 </div>
-<span class="p-10 text-green-400 fa">Fruits</span>
+<span class="p-10 text-green-400 fa">Our product</span>
 <section>
     <div class="flex justify-center items-center flex-shrink">
         <Card {cards}/>

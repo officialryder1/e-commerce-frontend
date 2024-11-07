@@ -1,6 +1,14 @@
 import { redirect } from "@sveltejs/kit";
 import {API} from "$env/static/private"
 
+export const load = async ({ locals }) => {
+    const shipping = locals.shipping
+
+    if(!shipping){
+        throw redirect(302, '/auth/login')
+    }
+}
+
 export const actions = {
     default: async({ request, cookies}) => {
 
