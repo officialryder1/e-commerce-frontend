@@ -18,6 +18,7 @@
     let productImage = cards.map(image => image.product_image)
     
 </script>
+
 {#if user}
     {#if !user_verify}
         <Alert style="alert alert-success" message="Please! verify your account to start shopping" showButton=true {user_id}/>

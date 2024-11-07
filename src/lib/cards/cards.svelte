@@ -16,7 +16,7 @@
 
 <div class="card w-96 bg-base-100 shadow-xl">
     <figure>
-        <img src={ImageUrl(product_image)} alt={name} class="rounded-lg">
+        <img src={ImageUrl(product_image)} alt={name} class="rounded-lg" loading="lazy">
     </figure>
     <div class="card-body">
         <h2 class="card-title">{name}</h2>
